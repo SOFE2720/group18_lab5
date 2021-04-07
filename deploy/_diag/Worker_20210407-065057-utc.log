@@ -1,0 +1,2993 @@
+[2021-04-07 06:50:57Z INFO HostContext] No proxy settings were found based on environmental variables (http_proxy/https_proxy/HTTP_PROXY/HTTPS_PROXY)
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials'
+[2021-04-07 06:50:57Z INFO Worker] Version: 2.277.1
+[2021-04-07 06:50:57Z INFO Worker] Commit: 183a3dd9a0d4d51feddc5fe9fa6c3b5f8b08343d
+[2021-04-07 06:50:57Z INFO Worker] Culture: en-CA
+[2021-04-07 06:50:57Z INFO Worker] UI Culture: en-US
+[2021-04-07 06:50:57Z INFO Worker] Waiting to receive the job message from the channel.
+[2021-04-07 06:50:57Z INFO Worker] Message received.
+[2021-04-07 06:50:57Z INFO Worker] Job message:
+ {
+  "fileTable": [
+    ".github/workflows/node.js.yml"
+  ],
+  "mask": [
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    },
+    {
+      "type": "regex",
+      "value": "***"
+    }
+  ],
+  "steps": [
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/checkout",
+        "ref": "v2",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "condition": "success()",
+      "id": "56825445-2bcd-5dc9-133e-3e301c6fbe2a",
+      "name": "actionscheckout"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "repository",
+        "name": "actions/setup-node",
+        "ref": "v1",
+        "repositoryType": "GitHub",
+        "path": ""
+      },
+      "displayNameToken": {
+        "type": 3,
+        "file": 1,
+        "line": 24,
+        "col": 13,
+        "expr": "format('Use Node.js {0}', matrix.node-version)"
+      },
+      "inputs": {
+        "type": 2,
+        "file": 1,
+        "line": 27,
+        "col": 9,
+        "map": [
+          {
+            "key": {
+              "type": 0,
+              "file": 1,
+              "line": 27,
+              "col": 9,
+              "lit": "node-version"
+            },
+            "value": {
+              "type": 3,
+              "file": 1,
+              "line": 27,
+              "col": 23,
+              "expr": "matrix.node-version"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "991352c2-9e91-5ad8-bc41-8505c4491f19",
+      "name": "actionssetup-node"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 28,
+              "col": 12,
+              "lit": "npm ci"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "ec94ed4c-090e-5d8d-d9f6-d75673a2e0f4",
+      "name": "run1"
+    },
+    {
+      "type": "action",
+      "reference": {
+        "type": "script"
+      },
+      "inputs": {
+        "type": 2,
+        "map": [
+          {
+            "key": "script",
+            "value": {
+              "type": 0,
+              "file": 1,
+              "line": 29,
+              "col": 12,
+              "lit": "npm run build --if-present"
+            }
+          }
+        ]
+      },
+      "condition": "success()",
+      "id": "35a6099b-55bb-59a5-08f9-7598acb3ad1a",
+      "name": "run2"
+    }
+  ],
+  "variables": {
+    "system.isScheduled": {
+      "value": "False"
+    },
+    "system": {
+      "value": "actions"
+    },
+    "system.hosttype": {
+      "value": "actions"
+    },
+    "system.servertype": {
+      "value": "Hosted"
+    },
+    "system.culture": {
+      "value": "en-US"
+    },
+    "system.collectionId": {
+      "value": "8a9c1705-87e3-4722-a5e8-837db8c6fd09"
+    },
+    "system.collectionUri": {
+      "value": "https://pipelines.actions.githubusercontent.com/SSHhx8rsXseNkqXBAUaaHrdg7AY6Y28lQ0zjxSl9Mta0QYL8Eo/"
+    },
+    "system.taskDefinitionsUri": {
+      "value": "https://pipelines.actions.githubusercontent.com/SSHhx8rsXseNkqXBAUaaHrdg7AY6Y28lQ0zjxSl9Mta0QYL8Eo/"
+    },
+    "system.pipelineStartTime": {
+      "value": "2021-04-07 06:50:54+00:00"
+    },
+    "system.definitionId": {
+      "value": "3"
+    },
+    "system.runner.lowdiskspacethreshold": {
+      "value": "100"
+    },
+    "DistributedTask.NewActionMetadata": {
+      "value": "true"
+    },
+    "DistributedTask.UseContextNameForGITHUBACTION": {
+      "value": "true"
+    },
+    "system.teamProjectId": {
+      "value": "00000000-0000-0000-0000-000000000000"
+    },
+    "build.buildId": {
+      "value": "14"
+    },
+    "build.containerId": {
+      "value": "245600"
+    },
+    "system.workflowFilePath": {
+      "value": ".github/workflows/node.js.yml"
+    },
+    "system.definitionName": {
+      "value": "airlineReservationSystem"
+    },
+    "system.planId": {
+      "value": "ab165f39-0ca9-425b-a484-df39819fd2bb"
+    },
+    "system.timelineId": {
+      "value": "ab165f39-0ca9-425b-a484-df39819fd2bb"
+    },
+    "system.stageDisplayName": {
+      "value": "__default"
+    },
+    "system.stageId": {
+      "value": "96ac2280-8cb4-5df5-99de-dd2da759617d"
+    },
+    "system.stageName": {
+      "value": "__default"
+    },
+    "system.stageAttempt": {
+      "value": "1"
+    },
+    "system.phaseDisplayName": {
+      "value": "build"
+    },
+    "system.phaseId": {
+      "value": "6884a131-87da-5381-61f3-d7acc3b91d76"
+    },
+    "system.phaseName": {
+      "value": "build"
+    },
+    "system.phaseAttempt": {
+      "value": "1"
+    },
+    "system.jobIdentifier": {
+      "value": "build._12_x"
+    },
+    "system.jobAttempt": {
+      "value": "1"
+    },
+    "System.JobPositionInPhase": {
+      "value": "1"
+    },
+    "System.TotalJobsInPhase": {
+      "value": "1"
+    },
+    "system.github.job": {
+      "value": "build"
+    },
+    "system.jobDisplayName": {
+      "value": "build (12.x)"
+    },
+    "system.jobId": {
+      "value": "a9a345e6-1106-5aaa-6fe5-f842db892828"
+    },
+    "system.jobName": {
+      "value": "_12_x"
+    },
+    "system.github.token.permissions": {
+      "value": "{\"Actions\":\"write\",\"Checks\":\"write\",\"Contents\":\"write\",\"Deployments\":\"write\",\"Issues\":\"write\",\"Metadata\":\"read\",\"OrganizationPackages\":\"write\",\"Packages\":\"write\",\"PullRequests\":\"write\",\"RepositoryProjects\":\"write\",\"SecurityEvents\":\"write\",\"Statuses\":\"write\"}"
+    },
+    "system.github.token": {
+      "value": "***",
+      "isSecret": true
+    },
+    "system.runnerGroupName": {
+      "value": "Default"
+    }
+  },
+  "messageType": "PipelineAgentJobRequest",
+  "plan": {
+    "scopeIdentifier": "00000000-0000-0000-0000-000000000000",
+    "planType": "Actions",
+    "version": 13,
+    "planId": "ab165f39-0ca9-425b-a484-df39819fd2bb",
+    "planGroup": "Actions:00000000-0000-0000-0000-000000000000:1",
+    "artifactUri": "vstfs:///Build/Build/14",
+    "artifactLocation": null,
+    "definition": {
+      "_links": {},
+      "id": 3,
+      "name": "airlineReservationSystem"
+    },
+    "owner": {
+      "_links": {},
+      "id": 3,
+      "name": "SOFE2720"
+    }
+  },
+  "timeline": {
+    "id": "ab165f39-0ca9-425b-a484-df39819fd2bb",
+    "changeId": 5,
+    "location": null
+  },
+  "jobId": "a9a345e6-1106-5aaa-6fe5-f842db892828",
+  "jobDisplayName": "build (12.x)",
+  "jobName": "_12_x",
+  "requestId": 19,
+  "lockedUntil": "0001-01-01T00:00:00",
+  "resources": {
+    "endpoints": [
+      {
+        "data": {
+          "ServerId": "8a9c1705-87e3-4722-a5e8-837db8c6fd09",
+          "ServerName": "SSHhx8rsXseNkqXBAUaaHrdg7AY6Y28lQ0zjxSl9Mta0QYL8Eo",
+          "CacheServerUrl": "https://artifactcache.actions.githubusercontent.com/SSHhx8rsXseNkqXBAUaaHrdg7AY6Y28lQ0zjxSl9Mta0QYL8Eo/"
+        },
+        "name": "SystemVssConnection",
+        "url": "https://pipelines.actions.githubusercontent.com/SSHhx8rsXseNkqXBAUaaHrdg7AY6Y28lQ0zjxSl9Mta0QYL8Eo/",
+        "authorization": {
+          "parameters": {
+            "AccessToken": ***
+          },
+          "scheme": "OAuth"
+        },
+        "isShared": false,
+        "isReady": true
+      }
+    ]
+  },
+  "contextData": {
+    "github": {
+      "t": 2,
+      "d": [
+        {
+          "k": "ref",
+          "v": "refs/heads/master"
+        },
+        {
+          "k": "sha",
+          "v": "946bd4eab9b6a9615bc08cb82de025ea8489bf2b"
+        },
+        {
+          "k": "repository",
+          "v": "SOFE2720/airlineReservationSystem"
+        },
+        {
+          "k": "repository_owner",
+          "v": "SOFE2720"
+        },
+        {
+          "k": "repositoryUrl",
+          "v": "git://github.com/SOFE2720/airlineReservationSystem.git"
+        },
+        {
+          "k": "run_id",
+          "v": "725064378"
+        },
+        {
+          "k": "run_number",
+          "v": "6"
+        },
+        {
+          "k": "retention_days",
+          "v": "90"
+        },
+        {
+          "k": "actor",
+          "v": "rnlclngpilar"
+        },
+        {
+          "k": "workflow",
+          "v": "Node.js CI"
+        },
+        {
+          "k": "head_ref",
+          "v": ""
+        },
+        {
+          "k": "base_ref",
+          "v": ""
+        },
+        {
+          "k": "event_name",
+          "v": "push"
+        },
+        {
+          "k": "event",
+          "v": {
+            "t": 2,
+            "d": [
+              {
+                "k": "after",
+                "v": "946bd4eab9b6a9615bc08cb82de025ea8489bf2b"
+              },
+              {
+                "k": "base_ref",
+                "v": null
+              },
+              {
+                "k": "before",
+                "v": "b4b35882a2a99f09bd26efdd3eafc058ebea6f9b"
+              },
+              {
+                "k": "commits",
+                "v": {
+                  "t": 1,
+                  "a": [
+                    {
+                      "t": 2,
+                      "d": [
+                        {
+                          "k": "author",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "rnlclng.pilar@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "rnlclngpilar"
+                              },
+                              {
+                                "k": "username",
+                                "v": "rnlclngpilar"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "committer",
+                          "v": {
+                            "t": 2,
+                            "d": [
+                              {
+                                "k": "email",
+                                "v": "rnlclng.pilar@gmail.com"
+                              },
+                              {
+                                "k": "name",
+                                "v": "rnlclngpilar"
+                              },
+                              {
+                                "k": "username",
+                                "v": "rnlclngpilar"
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "k": "distinct",
+                          "v": true
+                        },
+                        {
+                          "k": "id",
+                          "v": "946bd4eab9b6a9615bc08cb82de025ea8489bf2b"
+                        },
+                        {
+                          "k": "message",
+                          "v": "test"
+                        },
+                        {
+                          "k": "timestamp",
+                          "v": "2021-04-07T02:33:01-04:00"
+                        },
+                        {
+                          "k": "tree_id",
+                          "v": "758fb9a26e666a596160fc65a6887797216a2df1"
+                        },
+                        {
+                          "k": "url",
+                          "v": "https://github.com/SOFE2720/airlineReservationSystem/commit/946bd4eab9b6a9615bc08cb82de025ea8489bf2b"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "compare",
+                "v": "https://github.com/SOFE2720/airlineReservationSystem/compare/b4b35882a2a9...946bd4eab9b6"
+              },
+              {
+                "k": "created",
+                "v": false
+              },
+              {
+                "k": "deleted",
+                "v": false
+              },
+              {
+                "k": "forced",
+                "v": false
+              },
+              {
+                "k": "head_commit",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "author",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "rnlclng.pilar@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "rnlclngpilar"
+                          },
+                          {
+                            "k": "username",
+                            "v": "rnlclngpilar"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "committer",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "email",
+                            "v": "rnlclng.pilar@gmail.com"
+                          },
+                          {
+                            "k": "name",
+                            "v": "rnlclngpilar"
+                          },
+                          {
+                            "k": "username",
+                            "v": "rnlclngpilar"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "distinct",
+                      "v": true
+                    },
+                    {
+                      "k": "id",
+                      "v": "946bd4eab9b6a9615bc08cb82de025ea8489bf2b"
+                    },
+                    {
+                      "k": "message",
+                      "v": "test"
+                    },
+                    {
+                      "k": "timestamp",
+                      "v": "2021-04-07T02:33:01-04:00"
+                    },
+                    {
+                      "k": "tree_id",
+                      "v": "758fb9a26e666a596160fc65a6887797216a2df1"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/SOFE2720/airlineReservationSystem/commit/946bd4eab9b6a9615bc08cb82de025ea8489bf2b"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "organization",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/77709537?v=4"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/orgs/SOFE2720/events"
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/orgs/SOFE2720/hooks"
+                    },
+                    {
+                      "k": "id",
+                      "v": 77709537.0
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/orgs/SOFE2720/issues"
+                    },
+                    {
+                      "k": "login",
+                      "v": "SOFE2720"
+                    },
+                    {
+                      "k": "members_url",
+                      "v": "https://api.github.com/orgs/SOFE2720/members{/member}"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDEyOk9yZ2FuaXphdGlvbjc3NzA5NTM3"
+                    },
+                    {
+                      "k": "public_members_url",
+                      "v": "https://api.github.com/orgs/SOFE2720/public_members{/member}"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/orgs/SOFE2720/repos"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/orgs/SOFE2720"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "pusher",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "email",
+                      "v": "68527459+rnlclngpilar@users.noreply.github.com"
+                    },
+                    {
+                      "k": "name",
+                      "v": "rnlclngpilar"
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "ref",
+                "v": "refs/heads/master"
+              },
+              {
+                "k": "repository",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "archive_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/{archive_format}{/ref}"
+                    },
+                    {
+                      "k": "archived",
+                      "v": false
+                    },
+                    {
+                      "k": "assignees_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/assignees{/user}"
+                    },
+                    {
+                      "k": "blobs_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/git/blobs{/sha}"
+                    },
+                    {
+                      "k": "branches_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/branches{/branch}"
+                    },
+                    {
+                      "k": "clone_url",
+                      "v": "https://github.com/SOFE2720/airlineReservationSystem.git"
+                    },
+                    {
+                      "k": "collaborators_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/collaborators{/collaborator}"
+                    },
+                    {
+                      "k": "comments_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/comments{/number}"
+                    },
+                    {
+                      "k": "commits_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/commits{/sha}"
+                    },
+                    {
+                      "k": "compare_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/compare/{base}...{head}"
+                    },
+                    {
+                      "k": "contents_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/contents/{+path}"
+                    },
+                    {
+                      "k": "contributors_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/contributors"
+                    },
+                    {
+                      "k": "created_at",
+                      "v": 1617738185.0
+                    },
+                    {
+                      "k": "default_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "deployments_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/deployments"
+                    },
+                    {
+                      "k": "description",
+                      "v": null
+                    },
+                    {
+                      "k": "disabled",
+                      "v": false
+                    },
+                    {
+                      "k": "downloads_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/downloads"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/events"
+                    },
+                    {
+                      "k": "fork",
+                      "v": false
+                    },
+                    {
+                      "k": "forks",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "forks_count",
+                      "v": 1.0
+                    },
+                    {
+                      "k": "forks_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/forks"
+                    },
+                    {
+                      "k": "full_name",
+                      "v": "SOFE2720/airlineReservationSystem"
+                    },
+                    {
+                      "k": "git_commits_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/git/commits{/sha}"
+                    },
+                    {
+                      "k": "git_refs_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/git/refs{/sha}"
+                    },
+                    {
+                      "k": "git_tags_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/git/tags{/sha}"
+                    },
+                    {
+                      "k": "git_url",
+                      "v": "git://github.com/SOFE2720/airlineReservationSystem.git"
+                    },
+                    {
+                      "k": "has_downloads",
+                      "v": true
+                    },
+                    {
+                      "k": "has_issues",
+                      "v": true
+                    },
+                    {
+                      "k": "has_pages",
+                      "v": false
+                    },
+                    {
+                      "k": "has_projects",
+                      "v": true
+                    },
+                    {
+                      "k": "has_wiki",
+                      "v": true
+                    },
+                    {
+                      "k": "homepage",
+                      "v": null
+                    },
+                    {
+                      "k": "hooks_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/hooks"
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/SOFE2720/airlineReservationSystem"
+                    },
+                    {
+                      "k": "id",
+                      "v": 355310591.0
+                    },
+                    {
+                      "k": "issue_comment_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/issues/comments{/number}"
+                    },
+                    {
+                      "k": "issue_events_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/issues/events{/number}"
+                    },
+                    {
+                      "k": "issues_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/issues{/number}"
+                    },
+                    {
+                      "k": "keys_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/keys{/key_id}"
+                    },
+                    {
+                      "k": "labels_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/labels{/name}"
+                    },
+                    {
+                      "k": "language",
+                      "v": null
+                    },
+                    {
+                      "k": "languages_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/languages"
+                    },
+                    {
+                      "k": "license",
+                      "v": null
+                    },
+                    {
+                      "k": "master_branch",
+                      "v": "master"
+                    },
+                    {
+                      "k": "merges_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/merges"
+                    },
+                    {
+                      "k": "milestones_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/milestones{/number}"
+                    },
+                    {
+                      "k": "mirror_url",
+                      "v": null
+                    },
+                    {
+                      "k": "name",
+                      "v": "airlineReservationSystem"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDEwOlJlcG9zaXRvcnkzNTUzMTA1OTE="
+                    },
+                    {
+                      "k": "notifications_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/notifications{?since,all,participating}"
+                    },
+                    {
+                      "k": "open_issues",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "open_issues_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "organization",
+                      "v": "SOFE2720"
+                    },
+                    {
+                      "k": "owner",
+                      "v": {
+                        "t": 2,
+                        "d": [
+                          {
+                            "k": "avatar_url",
+                            "v": "https://avatars.githubusercontent.com/u/77709537?v=4"
+                          },
+                          {
+                            "k": "email",
+                            "v": null
+                          },
+                          {
+                            "k": "events_url",
+                            "v": "https://api.github.com/users/SOFE2720/events{/privacy}"
+                          },
+                          {
+                            "k": "followers_url",
+                            "v": "https://api.github.com/users/SOFE2720/followers"
+                          },
+                          {
+                            "k": "following_url",
+                            "v": "https://api.github.com/users/SOFE2720/following{/other_user}"
+                          },
+                          {
+                            "k": "gists_url",
+                            "v": "https://api.github.com/users/SOFE2720/gists{/gist_id}"
+                          },
+                          {
+                            "k": "gravatar_id",
+                            "v": ""
+                          },
+                          {
+                            "k": "html_url",
+                            "v": "https://github.com/SOFE2720"
+                          },
+                          {
+                            "k": "id",
+                            "v": 77709537.0
+                          },
+                          {
+                            "k": "login",
+                            "v": "SOFE2720"
+                          },
+                          {
+                            "k": "name",
+                            "v": "SOFE2720"
+                          },
+                          {
+                            "k": "node_id",
+                            "v": "MDEyOk9yZ2FuaXphdGlvbjc3NzA5NTM3"
+                          },
+                          {
+                            "k": "organizations_url",
+                            "v": "https://api.github.com/users/SOFE2720/orgs"
+                          },
+                          {
+                            "k": "received_events_url",
+                            "v": "https://api.github.com/users/SOFE2720/received_events"
+                          },
+                          {
+                            "k": "repos_url",
+                            "v": "https://api.github.com/users/SOFE2720/repos"
+                          },
+                          {
+                            "k": "site_admin",
+                            "v": false
+                          },
+                          {
+                            "k": "starred_url",
+                            "v": "https://api.github.com/users/SOFE2720/starred{/owner}{/repo}"
+                          },
+                          {
+                            "k": "subscriptions_url",
+                            "v": "https://api.github.com/users/SOFE2720/subscriptions"
+                          },
+                          {
+                            "k": "type",
+                            "v": "Organization"
+                          },
+                          {
+                            "k": "url",
+                            "v": "https://api.github.com/users/SOFE2720"
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "k": "private",
+                      "v": false
+                    },
+                    {
+                      "k": "pulls_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/pulls{/number}"
+                    },
+                    {
+                      "k": "pushed_at",
+                      "v": 1617777215.0
+                    },
+                    {
+                      "k": "releases_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/releases{/id}"
+                    },
+                    {
+                      "k": "size",
+                      "v": 2.0
+                    },
+                    {
+                      "k": "ssh_url",
+                      "v": "git@github.com:SOFE2720/airlineReservationSystem.git"
+                    },
+                    {
+                      "k": "stargazers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_count",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "stargazers_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/stargazers"
+                    },
+                    {
+                      "k": "statuses_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/statuses/{sha}"
+                    },
+                    {
+                      "k": "subscribers_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/subscribers"
+                    },
+                    {
+                      "k": "subscription_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/subscription"
+                    },
+                    {
+                      "k": "svn_url",
+                      "v": "https://github.com/SOFE2720/airlineReservationSystem"
+                    },
+                    {
+                      "k": "tags_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/tags"
+                    },
+                    {
+                      "k": "teams_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/teams"
+                    },
+                    {
+                      "k": "trees_url",
+                      "v": "https://api.github.com/repos/SOFE2720/airlineReservationSystem/git/trees{/sha}"
+                    },
+                    {
+                      "k": "updated_at",
+                      "v": "2021-04-07T06:23:10Z"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://github.com/SOFE2720/airlineReservationSystem"
+                    },
+                    {
+                      "k": "watchers",
+                      "v": 0.0
+                    },
+                    {
+                      "k": "watchers_count",
+                      "v": 0.0
+                    }
+                  ]
+                }
+              },
+              {
+                "k": "sender",
+                "v": {
+                  "t": 2,
+                  "d": [
+                    {
+                      "k": "avatar_url",
+                      "v": "https://avatars.githubusercontent.com/u/68527459?v=4"
+                    },
+                    {
+                      "k": "events_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/events{/privacy}"
+                    },
+                    {
+                      "k": "followers_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/followers"
+                    },
+                    {
+                      "k": "following_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/following{/other_user}"
+                    },
+                    {
+                      "k": "gists_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/gists{/gist_id}"
+                    },
+                    {
+                      "k": "gravatar_id",
+                      "v": ""
+                    },
+                    {
+                      "k": "html_url",
+                      "v": "https://github.com/rnlclngpilar"
+                    },
+                    {
+                      "k": "id",
+                      "v": 68527459.0
+                    },
+                    {
+                      "k": "login",
+                      "v": "rnlclngpilar"
+                    },
+                    {
+                      "k": "node_id",
+                      "v": "MDQ6VXNlcjY4NTI3NDU5"
+                    },
+                    {
+                      "k": "organizations_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/orgs"
+                    },
+                    {
+                      "k": "received_events_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/received_events"
+                    },
+                    {
+                      "k": "repos_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/repos"
+                    },
+                    {
+                      "k": "site_admin",
+                      "v": false
+                    },
+                    {
+                      "k": "starred_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/starred{/owner}{/repo}"
+                    },
+                    {
+                      "k": "subscriptions_url",
+                      "v": "https://api.github.com/users/rnlclngpilar/subscriptions"
+                    },
+                    {
+                      "k": "type",
+                      "v": "User"
+                    },
+                    {
+                      "k": "url",
+                      "v": "https://api.github.com/users/rnlclngpilar"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "k": "server_url",
+          "v": "https://github.com"
+        },
+        {
+          "k": "api_url",
+          "v": "https://api.github.com"
+        },
+        {
+          "k": "graphql_url",
+          "v": "https://api.github.com/graphql"
+        }
+      ]
+    },
+    "needs": {
+      "t": 2
+    },
+    "matrix": {
+      "t": 2,
+      "d": [
+        {
+          "k": "node-version",
+          "v": "12.x"
+        }
+      ]
+    },
+    "strategy": {
+      "t": 2,
+      "d": [
+        {
+          "k": "fail-fast",
+          "v": true
+        },
+        {
+          "k": "job-index",
+          "v": 0.0
+        },
+        {
+          "k": "job-total",
+          "v": 1.0
+        },
+        {
+          "k": "max-parallel",
+          "v": 1.0
+        }
+      ]
+    }
+  }
+}
+[2021-04-07 06:50:57Z INFO JobRunner] Job ID a9a345e6-1106-5aaa-6fe5-f842db892828
+[2021-04-07 06:50:57Z INFO JobRunner] Creating job server with URL: https://pipelines.actions.githubusercontent.com/SSHhx8rsXseNkqXBAUaaHrdg7AY6Y28lQ0zjxSl9Mta0QYL8Eo/
+[2021-04-07 06:50:57Z INFO GitHubActionsService] Starting operation Location.GetConnectionData
+[2021-04-07 06:50:57Z INFO Worker] Listening for cancel message from the channel.
+[2021-04-07 06:50:57Z INFO Worker] Waiting for the job to complete or for a cancel message from the channel.
+[2021-04-07 06:50:57Z INFO GitHubActionsService] Finished operation Location.GetConnectionData
+[2021-04-07 06:50:57Z INFO JobServerQueue] Start process web console line queue.
+[2021-04-07 06:50:57Z INFO JobServerQueue] Start process file upload queue.
+[2021-04-07 06:50:57Z INFO JobServerQueue] Start process timeline update queue.
+[2021-04-07 06:50:57Z INFO ExecutionContext] Initialize GitHub context
+[2021-04-07 06:50:57Z INFO ExecutionContext] Initialize Env context
+[2021-04-07 06:50:57Z INFO ConfigurationStore] currentAssemblyLocation: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin\Runner.Worker.dll
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO ConfigurationStore] binPath: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO ConfigurationStore] RootFolder: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known config file 'Runner': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.runner'
+[2021-04-07 06:50:57Z INFO ConfigurationStore] ConfigFilePath: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.runner
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials'
+[2021-04-07 06:50:57Z INFO ConfigurationStore] CredFilePath: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known config file 'MigratedCredentials': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials_migrated'
+[2021-04-07 06:50:57Z INFO ConfigurationStore] MigratedCredFilePath: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials_migrated
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known config file 'Service': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.service'
+[2021-04-07 06:50:57Z INFO ConfigurationStore] ServiceConfigFilePath: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.service
+[2021-04-07 06:50:57Z INFO ConfigurationStore] Read setting file: 310 chars
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Diag': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\_diag'
+[2021-04-07 06:50:57Z INFO JobRunner] Starting the job execution context.
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO JobRunner] Validating directory permissions for: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Tools': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_tool'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:50:57Z INFO JobRunner] Getting job extension.
+[2021-04-07 06:50:57Z INFO JobRunner] Initialize job. Getting all job steps.
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Diag': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\_diag'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known config file 'Credentials': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known config file 'SetupInfo': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.setup_info'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO PipelineDirectoryManager] Loading tracking config if exists: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_PipelineMapping\SOFE2720/airlineReservationSystem\PipelineFolder.json
+[2021-04-07 06:50:57Z INFO PipelineDirectoryManager] Updating job run properties.
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO JobExtension] Downloading actions
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:57Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6cf1f66b-b216-48eb-aac3-61afe7f31933', success rate: 1/1.
+[2021-04-07 06:50:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:58Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:58Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:58Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:58Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:58Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:58Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/checkout/zipball/5a4ac9002d0be2fb38bd78e4b4dbde5606d7042f' into C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\_temp_0e536522-523c-4415-a3ee-1edda0fb823f\d2c7e452-4977-47f1-8d58-9b0d25d241e2.zip.
+[2021-04-07 06:50:58Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6cf1f66b-b216-48eb-aac3-61afe7f31933', success rate: 1/1.
+[2021-04-07 06:50:59Z INFO ActionManager] Finished getting action repository.
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO ActionManager] Save archive 'https://api.github.com/repos/actions/setup-node/zipball/56899e050abffc08c2b3b61f3ec6a79a9dc3223d' into C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\_temp_de704226-6bc4-4ea7-bd8b-72883214edc6\f2e82431-0022-4b5f-8140-9d5532df487e.zip.
+[2021-04-07 06:50:59Z INFO JobServerQueue] Try to append 1 batches web console lines for record '6cf1f66b-b216-48eb-aac3-61afe7f31933', success rate: 1/1.
+[2021-04-07 06:50:59Z INFO ActionManager] Finished getting action repository.
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO ActionManifestManager] Load schema file with definitions: [
+  "null",
+  "boolean",
+  "number",
+  "string",
+  "sequence",
+  "mapping",
+  "any",
+  "action-root",
+  "inputs",
+  "input",
+  "outputs",
+  "outputs-attributes",
+  "runs",
+  "container-runs",
+  "container-runs-args",
+  "container-runs-env",
+  "node12-runs",
+  "plugin-runs",
+  "composite-runs",
+  "composite-steps",
+  "composite-step",
+  "container-runs-context",
+  "output-value",
+  "input-default-context",
+  "non-empty-string",
+  "string-steps-context",
+  "step-env"
+]
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2021-04-07 06:50:59Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO ActionManager] Load action that reference repository from 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\actions\checkout\v2'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2021-04-07 06:50:59Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-04-07 06:50:59Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-04-07 06:50:59Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO ActionManifestManager] Ignore action property author.
+[2021-04-07 06:50:59Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment and add it to the PATH, additionally providing proxy support",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 14,
+          "lit": "10.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 11,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2021-04-07 06:50:59Z INFO ActionManager] Action node.js file: dist/index.js, no more preparation.
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO ActionManager] Load action that reference repository from 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\actions\setup-node\v1'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:50:59Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:50:59Z INFO ActionManifestManager] Ignore action property author.
+[2021-04-07 06:50:59Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment and add it to the PATH, additionally providing proxy support",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 14,
+          "lit": "10.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 11,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2021-04-07 06:50:59Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-04-07 06:50:59Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-04-07 06:50:59Z INFO ActionManager] Action post node.js file: N/A.
+[2021-04-07 06:50:59Z INFO JobExtension] Adding .
+[2021-04-07 06:50:59Z INFO JobExtension] Adding .
+[2021-04-07 06:51:00Z INFO JobExtension] Adding .
+[2021-04-07 06:51:00Z INFO JobExtension] Adding .
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Diag': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\_diag'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Diag': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\_diag'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Diag': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\_diag'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Diag': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\_diag'
+[2021-04-07 06:51:00Z INFO JobExtension] Total accessible running process: 335.
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:00Z INFO JobRunner] Total job steps: 4.
+[2021-04-07 06:51:00Z INFO JobRunner] Run all job steps.
+[2021-04-07 06:51:00Z INFO StepsRunner] Processing step: DisplayName='Run actions/checkout@v2'
+[2021-04-07 06:51:00Z INFO StepsRunner] Initialize Env context for step
+[2021-04-07 06:51:00Z INFO StepsRunner] Evaluating: success()
+[2021-04-07 06:51:00Z INFO StepsRunner] Result: true
+[2021-04-07 06:51:00Z INFO StepsRunner] Starting the step.
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:00Z INFO StepsRunner] Which: 'chcp'
+[2021-04-07 06:51:00Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper] Process started with process id 9808, waiting for process exit.
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper] Finished process 9808 with exit code 0, and elapsed time 00:00:00.0078024.
+[2021-04-07 06:51:00Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:51:00Z INFO ActionManager] Load action that reference repository from 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\actions\checkout\v2'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2021-04-07 06:51:00Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-04-07 06:51:00Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-04-07 06:51:00Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2021-04-07 06:51:00Z INFO ExecutionContext] Reserve record order 6 to 10 for post job actions.
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Diag': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\_diag'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:00Z INFO ActionRunner] Write event payload to C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp\_github_workflow\event.json
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathFileCommand, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvFileCommand, Runner.Worker
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "SOFE2720/airlineReservationSystem"
+}
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2021-04-07 06:51:00Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2021-04-07 06:51:00Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.InternalPluginSetRepoPathCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetEnvCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SetOutputCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.SaveStateCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddPathCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMaskCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.AddMatcherCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.RemoveMatcherCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.WarningCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.ErrorCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.DebugCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.GroupCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EndGroupCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ExtensionManager] Creating instance: GitHub.Runner.Worker.EchoCommandExtension, Runner.Worker
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command error
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command group
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-04-07 06:51:00Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:00Z INFO HostContext] Well known directory 'Externals': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\externals'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\externals\node12\bin\node.exe'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\actions\checkout\v2\dist/index.js"'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\airlineReservationSystem\airlineReservationSystem'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:00Z INFO ProcessInvokerWrapper] Process started with process id 11620, waiting for process exit.
+[2021-04-07 06:51:00Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56825445-2bcd-5dc9-133e-3e301c6fbe2a', success rate: 1/1.
+[2021-04-07 06:51:00Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-04-07 06:51:01Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56825445-2bcd-5dc9-133e-3e301c6fbe2a', success rate: 1/1.
+[2021-04-07 06:51:01Z INFO AddMaskCommandExtension] Add new secret mask with length of 76
+[2021-04-07 06:51:02Z INFO JobServerQueue] Try to append 4 batches web console lines for record '56825445-2bcd-5dc9-133e-3e301c6fbe2a', success rate: 4/4.
+[2021-04-07 06:51:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56825445-2bcd-5dc9-133e-3e301c6fbe2a', success rate: 1/1.
+[2021-04-07 06:51:02Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56825445-2bcd-5dc9-133e-3e301c6fbe2a', success rate: 1/1.
+[2021-04-07 06:51:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56825445-2bcd-5dc9-133e-3e301c6fbe2a', success rate: 1/1.
+[2021-04-07 06:51:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56825445-2bcd-5dc9-133e-3e301c6fbe2a', success rate: 1/1.
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] Finished process 11620 with exit code 0, and elapsed time 00:00:03.4074004.
+[2021-04-07 06:51:03Z INFO StepsRunner] Step result: 
+[2021-04-07 06:51:03Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-04-07 06:51:03Z INFO StepsRunner] Current state: job state = ''
+[2021-04-07 06:51:03Z INFO StepsRunner] Processing step: DisplayName='Use Node.js 12.x'
+[2021-04-07 06:51:03Z INFO StepsRunner] Initialize Env context for step
+[2021-04-07 06:51:03Z INFO StepsRunner] Evaluating: success()
+[2021-04-07 06:51:03Z INFO StepsRunner] Result: true
+[2021-04-07 06:51:03Z INFO StepsRunner] Starting the step.
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:03Z INFO StepsRunner] Which: 'chcp'
+[2021-04-07 06:51:03Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] Process started with process id 12324, waiting for process exit.
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] Finished process 12324 with exit code 0, and elapsed time 00:00:00.0056121.
+[2021-04-07 06:51:03Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:51:03Z INFO ActionManager] Load action that reference repository from 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\actions\setup-node\v1'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:51:03Z INFO ActionManifestManager] Ignore action property author.
+[2021-04-07 06:51:03Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Setup Node.js environment",
+  "description": "Setup a Node.js environment and add it to the PATH, additionally providing proxy support",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 5,
+          "col": 3,
+          "lit": "always-auth"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 7,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 8,
+          "col": 3,
+          "lit": "node-version"
+        },
+        "value": {
+          "type": 0,
+          "file": 3,
+          "line": 10,
+          "col": 14,
+          "lit": "10.x"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 11,
+          "col": 3,
+          "lit": "registry-url"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 13,
+          "col": 3,
+          "lit": "scope"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 3,
+          "line": 16,
+          "col": 3,
+          "lit": "version"
+        },
+        "value": ""
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": false,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": null,
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": {
+    "version": "The version property will not be supported after October 1, 2019. Use node-version instead"
+  }
+}
+[2021-04-07 06:51:03Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-04-07 06:51:03Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-04-07 06:51:03Z INFO ActionManager] Action post node.js file: N/A.
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:03Z INFO ActionRunner] Write event payload to C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp\_github_workflow\event.json
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:03Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-04-07 06:51:03Z INFO ActionManifestManager] Input 'always-auth': default value evaluate result: {
+  "type": 0,
+  "file": 3,
+  "line": 7,
+  "col": 14,
+  "lit": "false"
+}
+[2021-04-07 06:51:03Z INFO ActionManifestManager] Input 'registry-url': default value evaluate result: ""
+[2021-04-07 06:51:03Z INFO ActionManifestManager] Input 'scope': default value evaluate result: ""
+[2021-04-07 06:51:03Z INFO ActionManifestManager] Input 'version': default value evaluate result: ""
+[2021-04-07 06:51:03Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command error
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command group
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-04-07 06:51:03Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:03Z INFO HostContext] Well known directory 'Externals': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\externals'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\externals\node12\bin\node.exe'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\actions\setup-node\v1\dist/index.js"'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\airlineReservationSystem\airlineReservationSystem'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:03Z INFO ProcessInvokerWrapper] Process started with process id 8820, waiting for process exit.
+[2021-04-07 06:51:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record '56825445-2bcd-5dc9-133e-3e301c6fbe2a', success rate: 1/1.
+[2021-04-07 06:51:03Z INFO JobServerQueue] Try to append 1 batches web console lines for record '991352c2-9e91-5ad8-bc41-8505c4491f19', success rate: 1/1.
+[2021-04-07 06:51:04Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-04-07 06:51:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '991352c2-9e91-5ad8-bc41-8505c4491f19', success rate: 1/1.
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] Finished process 8820 with exit code 0, and elapsed time 00:00:00.8968974.
+[2021-04-07 06:51:04Z INFO StepsRunner] Step result: 
+[2021-04-07 06:51:04Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-04-07 06:51:04Z INFO StepsRunner] Current state: job state = ''
+[2021-04-07 06:51:04Z INFO StepsRunner] Processing step: DisplayName='Run npm ci'
+[2021-04-07 06:51:04Z INFO StepsRunner] Initialize Env context for step
+[2021-04-07 06:51:04Z INFO StepsRunner] Evaluating: success()
+[2021-04-07 06:51:04Z INFO StepsRunner] Result: true
+[2021-04-07 06:51:04Z INFO StepsRunner] Starting the step.
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:04Z INFO StepsRunner] Which: 'chcp'
+[2021-04-07 06:51:04Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] Process started with process id 13400, waiting for process exit.
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] Finished process 13400 with exit code 0, and elapsed time 00:00:00.0058754.
+[2021-04-07 06:51:04Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:04Z INFO ActionRunner] Write event payload to C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp\_github_workflow\event.json
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:04Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-04-07 06:51:04Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command error
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command group
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-04-07 06:51:04Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-04-07 06:51:04Z INFO ScriptHandler] Which: 'pwsh'
+[2021-04-07 06:51:04Z INFO ScriptHandler] Not found.
+[2021-04-07 06:51:04Z INFO ScriptHandler] Defaulting to powershell
+[2021-04-07 06:51:04Z INFO ScriptHandler] Which: 'powershell'
+[2021-04-07 06:51:04Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:04Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:04Z INFO ScriptHandler] Which: 'pwsh'
+[2021-04-07 06:51:04Z INFO ScriptHandler] Not found.
+[2021-04-07 06:51:04Z INFO ScriptHandler] Defaulting to powershell
+[2021-04-07 06:51:04Z INFO ScriptHandler] Which: 'powershell'
+[2021-04-07 06:51:04Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp\be0487ba-bd1b-4dfa-8ddb-6054465f89d3.ps1'"'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\airlineReservationSystem\airlineReservationSystem'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:04Z INFO ProcessInvokerWrapper] Process started with process id 3124, waiting for process exit.
+[2021-04-07 06:51:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record '991352c2-9e91-5ad8-bc41-8505c4491f19', success rate: 1/1.
+[2021-04-07 06:51:04Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ec94ed4c-090e-5d8d-d9f6-d75673a2e0f4', success rate: 1/1.
+[2021-04-07 06:51:05Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-04-07 06:51:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ec94ed4c-090e-5d8d-d9f6-d75673a2e0f4', success rate: 1/1.
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] Finished process 3124 with exit code 0, and elapsed time 00:00:01.2089269.
+[2021-04-07 06:51:05Z INFO StepsRunner] Step result: 
+[2021-04-07 06:51:05Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-04-07 06:51:05Z INFO StepsRunner] Current state: job state = ''
+[2021-04-07 06:51:05Z INFO StepsRunner] Processing step: DisplayName='Run npm run build --if-present'
+[2021-04-07 06:51:05Z INFO StepsRunner] Initialize Env context for step
+[2021-04-07 06:51:05Z INFO StepsRunner] Evaluating: success()
+[2021-04-07 06:51:05Z INFO StepsRunner] Result: true
+[2021-04-07 06:51:05Z INFO StepsRunner] Starting the step.
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:05Z INFO StepsRunner] Which: 'chcp'
+[2021-04-07 06:51:05Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] Process started with process id 22536, waiting for process exit.
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] Finished process 22536 with exit code 0, and elapsed time 00:00:00.0058740.
+[2021-04-07 06:51:05Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:05Z INFO ActionRunner] Write event payload to C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp\_github_workflow\event.json
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:05Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-04-07 06:51:05Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command error
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command group
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-04-07 06:51:05Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-04-07 06:51:05Z INFO ScriptHandler] Which: 'pwsh'
+[2021-04-07 06:51:05Z INFO ScriptHandler] Not found.
+[2021-04-07 06:51:05Z INFO ScriptHandler] Defaulting to powershell
+[2021-04-07 06:51:05Z INFO ScriptHandler] Which: 'powershell'
+[2021-04-07 06:51:05Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:05Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:05Z INFO ScriptHandler] Which: 'pwsh'
+[2021-04-07 06:51:05Z INFO ScriptHandler] Not found.
+[2021-04-07 06:51:05Z INFO ScriptHandler] Defaulting to powershell
+[2021-04-07 06:51:05Z INFO ScriptHandler] Which: 'powershell'
+[2021-04-07 06:51:05Z INFO ScriptHandler] Location: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\System32\WindowsPowerShell\v1.0\powershell.EXE'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Arguments: '-command ". 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp\e2789195-869a-4afd-961d-d06cae439537.ps1'"'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\airlineReservationSystem\airlineReservationSystem'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:05Z INFO ProcessInvokerWrapper] Process started with process id 15832, waiting for process exit.
+[2021-04-07 06:51:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record 'ec94ed4c-090e-5d8d-d9f6-d75673a2e0f4', success rate: 1/1.
+[2021-04-07 06:51:05Z INFO JobServerQueue] Try to append 1 batches web console lines for record '35a6099b-55bb-59a5-08f9-7598acb3ad1a', success rate: 1/1.
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] Finished process 15832 with exit code 0, and elapsed time 00:00:00.5684630.
+[2021-04-07 06:51:06Z INFO StepsRunner] Step result: 
+[2021-04-07 06:51:06Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-04-07 06:51:06Z INFO StepsRunner] Current state: job state = ''
+[2021-04-07 06:51:06Z INFO StepsRunner] Processing step: DisplayName='Post Run actions/checkout@v2'
+[2021-04-07 06:51:06Z INFO StepsRunner] Initialize Env context for step
+[2021-04-07 06:51:06Z INFO StepsRunner] Evaluating: always()
+[2021-04-07 06:51:06Z INFO StepsRunner] Result: true
+[2021-04-07 06:51:06Z INFO StepsRunner] Starting the step.
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:06Z INFO StepsRunner] Which: 'chcp'
+[2021-04-07 06:51:06Z INFO StepsRunner] Location: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   File name: 'C:\Windows\system32\chcp.COM'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Arguments: '65001'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] Process started with process id 28028, waiting for process exit.
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] Finished process 28028 with exit code 0, and elapsed time 00:00:00.0060627.
+[2021-04-07 06:51:06Z INFO StepsRunner] Successfully returned to code page 65001 (UTF8)
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:51:06Z INFO ActionManager] Load action that reference repository from 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\actions\checkout\v2'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Actions': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions'
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Loaded action.yml file: {
+  "name": "Checkout",
+  "description": "Checkout a Git repository at a particular version",
+  "inputs": {
+    "type": 2,
+    "map": [
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 4,
+          "col": 3,
+          "lit": "repository"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 6,
+          "col": 14,
+          "expr": "github.repository"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 7,
+          "col": 3,
+          "lit": "ref"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 12,
+          "col": 3,
+          "lit": "token"
+        },
+        "value": {
+          "type": 3,
+          "file": 2,
+          "line": 24,
+          "col": 14,
+          "expr": "github.token"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 25,
+          "col": 3,
+          "lit": "ssh-key"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 37,
+          "col": 3,
+          "lit": "ssh-known-hosts"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 42,
+          "col": 3,
+          "lit": "ssh-strict"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 47,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 48,
+          "col": 3,
+          "lit": "persist-credentials"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 50,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 51,
+          "col": 3,
+          "lit": "path"
+        },
+        "value": ""
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 53,
+          "col": 3,
+          "lit": "clean"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 55,
+          "col": 14,
+          "lit": "true"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 56,
+          "col": 3,
+          "lit": "fetch-depth"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 58,
+          "col": 14,
+          "lit": "1"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 59,
+          "col": 3,
+          "lit": "lfs"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 61,
+          "col": 14,
+          "lit": "false"
+        }
+      },
+      {
+        "key": {
+          "type": 0,
+          "file": 2,
+          "line": 62,
+          "col": 3,
+          "lit": "submodules"
+        },
+        "value": {
+          "type": 0,
+          "file": 2,
+          "line": 70,
+          "col": 14,
+          "lit": "false"
+        }
+      }
+    ]
+  },
+  "execution": {
+    "executionType": "nodeJS",
+    "hasPre": false,
+    "hasPost": true,
+    "script": "dist/index.js",
+    "pre": null,
+    "post": "dist/index.js",
+    "cleanupCondition": "always()",
+    "initCondition": "always()"
+  },
+  "deprecated": null
+}
+[2021-04-07 06:51:06Z INFO ActionManager] Action pre node.js file: N/A.
+[2021-04-07 06:51:06Z INFO ActionManager] Action node.js file: dist/index.js.
+[2021-04-07 06:51:06Z INFO ActionManager] Action post node.js file: dist/index.js.
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:06Z INFO ActionRunner] Write event payload to C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp\_github_workflow\event.json
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Work': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Temp': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp'
+[2021-04-07 06:51:06Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IFileCommandExtension'
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'repository': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 6,
+  "col": 14,
+  "lit": "SOFE2720/airlineReservationSystem"
+}
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'ref': default value evaluate result: ""
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'token': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 24,
+  "col": 14,
+  "lit": "***"
+}
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'ssh-key': default value evaluate result: ""
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'ssh-known-hosts': default value evaluate result: ""
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'ssh-strict': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 47,
+  "col": 14,
+  "lit": "true"
+}
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'persist-credentials': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 50,
+  "col": 14,
+  "lit": "true"
+}
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'path': default value evaluate result: ""
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'clean': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 55,
+  "col": 14,
+  "lit": "true"
+}
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'fetch-depth': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 58,
+  "col": 14,
+  "lit": "1"
+}
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'lfs': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 61,
+  "col": 14,
+  "lit": "false"
+}
+[2021-04-07 06:51:06Z INFO ActionManifestManager] Input 'submodules': default value evaluate result: {
+  "type": 0,
+  "file": 2,
+  "line": 70,
+  "col": 14,
+  "lit": "false"
+}
+[2021-04-07 06:51:06Z INFO ExtensionManager] Getting extensions for interface: 'GitHub.Runner.Worker.IActionCommandExtension'
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command internal-set-repo-path
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command set-env
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command set-output
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command save-state
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command add-path
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command add-mask
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command add-matcher
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command remove-matcher
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command warning
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command error
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command debug
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command group
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command endgroup
+[2021-04-07 06:51:06Z INFO ActionCommandManager] Register action command extension for command echo
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:06Z INFO HostContext] Well known directory 'Externals': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\externals'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\externals\node12\bin\node.exe'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Arguments: '"C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_actions\actions\checkout\v2\dist/index.js"'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\airlineReservationSystem\airlineReservationSystem'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Encoding web name: utf-8 ; code page: '65001'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Persist current code page: 'True'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper]   High priority process: 'False'
+[2021-04-07 06:51:06Z INFO ProcessInvokerWrapper] Process started with process id 1688, waiting for process exit.
+[2021-04-07 06:51:06Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-04-07 06:51:06Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2998b3f7-3eea-46e4-9354-99b707d2bd3c', success rate: 1/1.
+[2021-04-07 06:51:07Z INFO JobServerQueue] Try to upload 1 log files or attachments, success rate: 1/1.
+[2021-04-07 06:51:07Z INFO AddMaskCommandExtension] Add new secret mask with length of 32
+[2021-04-07 06:51:07Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2998b3f7-3eea-46e4-9354-99b707d2bd3c', success rate: 1/1.
+[2021-04-07 06:51:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2998b3f7-3eea-46e4-9354-99b707d2bd3c', success rate: 1/1.
+[2021-04-07 06:51:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record '2998b3f7-3eea-46e4-9354-99b707d2bd3c', success rate: 1/1.
+[2021-04-07 06:51:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:08Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:51:08Z INFO ProcessInvokerWrapper] Finished process 1688 with exit code 0, and elapsed time 00:00:02.1849769.
+[2021-04-07 06:51:08Z INFO StepsRunner] Step result: 
+[2021-04-07 06:51:08Z INFO StepsRunner] No need for updating job result with current step result 'Succeeded'.
+[2021-04-07 06:51:08Z INFO StepsRunner] Current state: job state = ''
+[2021-04-07 06:51:08Z INFO JobRunner] Finalize job.
+[2021-04-07 06:51:08Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:51:08Z INFO HostContext] Well known directory 'Root': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy'
+[2021-04-07 06:51:08Z INFO HostContext] Well known directory 'Diag': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\_diag'
+[2021-04-07 06:51:08Z INFO JobExtension] Initialize Env context
+[2021-04-07 06:51:08Z INFO JobExtension] Initialize steps context
+[2021-04-07 06:51:08Z INFO JobExtension] Total accessible running process: 335.
+[2021-04-07 06:51:08Z INFO JobExtension] Inspecting process environment variables. PID: 10080 (dllhost)
+[2021-04-07 06:51:08Z INFO JobRunner] Job result after all job steps finish: Succeeded
+[2021-04-07 06:51:08Z INFO JobRunner] Completing the job execution context.
+[2021-04-07 06:51:08Z INFO JobRunner] Shutting down the job server queue.
+[2021-04-07 06:51:08Z INFO JobServerQueue] Fire signal to shutdown all queues.
+[2021-04-07 06:51:08Z INFO JobServerQueue] All queue process task stopped.
+[2021-04-07 06:51:08Z INFO JobServerQueue] Try to append 1 batches web console lines for record '1e061793-edd3-4fa5-aa77-348dd98d70ea', success rate: 1/1.
+[2021-04-07 06:51:08Z INFO JobServerQueue] Web console line queue drained.
+[2021-04-07 06:51:08Z INFO JobServerQueue] Uploading 3 files in one shot.
+[2021-04-07 06:51:09Z INFO JobServerQueue] Try to upload 3 log files or attachments, success rate: 3/3.
+[2021-04-07 06:51:09Z INFO JobServerQueue] File upload queue drained.
+[2021-04-07 06:51:09Z INFO JobServerQueue] Timeline update queue drained.
+[2021-04-07 06:51:09Z INFO JobServerQueue] All queue process tasks have been stopped, and all queues are drained.
+[2021-04-07 06:51:09Z INFO TempDirectoryManager] Cleaning runner temp folder: C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\deploy\_temp
+[2021-04-07 06:51:09Z INFO JobRunner] Raising job completed event.
+[2021-04-07 06:51:09Z INFO Worker] Job completed.
