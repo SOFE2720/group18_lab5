@@ -121,3 +121,138 @@ Date: Wed, 07 Apr 2021 06:40:25 GMT
 [2021-04-07 06:40:25Z INFO MessageListener] Session created.
 [2021-04-07 06:40:25Z INFO Terminal] WRITE LINE: 2021-04-07 06:40:25Z: Listening for Jobs
 [2021-04-07 06:40:25Z INFO JobDispatcher] Set runner/worker IPC timeout to 30 seconds.
+[2021-04-07 06:40:30Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials_rsaparams
+[2021-04-07 06:40:30Z INFO MessageListener] Message '1' received from session '2d506ea2-95e3-4446-95cd-c1a510af7a74'.
+[2021-04-07 06:40:30Z INFO JobDispatcher] Job request 13 for plan 3f0b665c-0c6b-49a4-8fe4-b839a28b7f69 job a9a345e6-1106-5aaa-6fe5-f842db892828 received.
+[2021-04-07 06:40:30Z INFO JobDispatcher] Pull OrchestrationId 3f0b665c-0c6b-49a4-8fe4-b839a28b7f69.build._12_x from JWT claims
+[2021-04-07 06:40:30Z INFO Terminal] WRITE LINE: 2021-04-07 06:40:30Z: Running job: build (12.x)
+[2021-04-07 06:40:30Z INFO JobDispatcher] Start renew job request 13 for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:40:30Z INFO JobDispatcher] Successfully renew job request 13, job is valid till 2021-04-07 6:50:30 AM
+[2021-04-07 06:40:30Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin\Runner.Worker.exe'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2168 2188'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2021-04-07 06:40:30Z INFO ProcessInvokerWrapper] Process started with process id 28992, waiting for process exit.
+[2021-04-07 06:40:30Z INFO JobDispatcher] Send job request message to worker for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:40:30Z INFO JobNotification] Entering JobStarted Notification
+[2021-04-07 06:40:30Z INFO JobNotification] Entering StartMonitor
+[2021-04-07 06:41:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:41:07Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:41:07Z INFO ProcessInvokerWrapper] Finished process 28992 with exit code 102, and elapsed time 00:00:36.8531346.
+[2021-04-07 06:41:07Z INFO JobDispatcher] Worker finished for job a9a345e6-1106-5aaa-6fe5-f842db892828. Code: 102
+[2021-04-07 06:41:07Z INFO JobDispatcher] finish job request for job a9a345e6-1106-5aaa-6fe5-f842db892828 with result: Failed
+[2021-04-07 06:41:07Z INFO Terminal] WRITE LINE: 2021-04-07 06:41:07Z: Job build (12.x) completed with result: Failed
+[2021-04-07 06:41:07Z INFO JobDispatcher] Stop renew job request for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:41:07Z INFO JobDispatcher] job renew has been canceled, stop renew job request 13.
+[2021-04-07 06:41:07Z INFO JobNotification] Entering JobCompleted Notification
+[2021-04-07 06:41:07Z INFO JobNotification] Entering EndMonitor
+[2021-04-07 06:43:05Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials_rsaparams
+[2021-04-07 06:43:05Z INFO MessageListener] Message '2' received from session '2d506ea2-95e3-4446-95cd-c1a510af7a74'.
+[2021-04-07 06:43:05Z INFO JobDispatcher] Job request 14 for plan 13f95aeb-ccc6-4a1f-a4cb-6c4280f1e15b job a9a345e6-1106-5aaa-6fe5-f842db892828 received.
+[2021-04-07 06:43:05Z INFO JobDispatcher] Pull OrchestrationId 13f95aeb-ccc6-4a1f-a4cb-6c4280f1e15b.build._12_x from JWT claims
+[2021-04-07 06:43:05Z INFO JobDispatcher] Job request a9a345e6-1106-5aaa-6fe5-f842db892828 processed succeed.
+[2021-04-07 06:43:05Z INFO Terminal] WRITE LINE: 2021-04-07 06:43:05Z: Running job: build (12.x)
+[2021-04-07 06:43:05Z INFO JobDispatcher] Start renew job request 14 for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:43:06Z INFO JobDispatcher] Successfully renew job request 14, job is valid till 2021-04-07 6:53:06 AM
+[2021-04-07 06:43:06Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin\Runner.Worker.exe'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 2168 1660'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2021-04-07 06:43:06Z INFO ProcessInvokerWrapper] Process started with process id 10668, waiting for process exit.
+[2021-04-07 06:43:06Z INFO JobDispatcher] Send job request message to worker for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:43:06Z INFO JobNotification] Entering JobStarted Notification
+[2021-04-07 06:43:06Z INFO JobNotification] Entering StartMonitor
+[2021-04-07 06:43:17Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:43:17Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:43:17Z INFO ProcessInvokerWrapper] Finished process 10668 with exit code 102, and elapsed time 00:00:11.3689528.
+[2021-04-07 06:43:17Z INFO JobDispatcher] Worker finished for job a9a345e6-1106-5aaa-6fe5-f842db892828. Code: 102
+[2021-04-07 06:43:17Z INFO JobDispatcher] finish job request for job a9a345e6-1106-5aaa-6fe5-f842db892828 with result: Failed
+[2021-04-07 06:43:17Z INFO Terminal] WRITE LINE: 2021-04-07 06:43:17Z: Job build (12.x) completed with result: Failed
+[2021-04-07 06:43:17Z INFO JobDispatcher] Stop renew job request for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:43:17Z INFO JobDispatcher] job renew has been canceled, stop renew job request 14.
+[2021-04-07 06:43:17Z INFO JobNotification] Entering JobCompleted Notification
+[2021-04-07 06:43:17Z INFO JobNotification] Entering EndMonitor
+[2021-04-07 06:45:11Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials_rsaparams
+[2021-04-07 06:45:11Z INFO MessageListener] Message '3' received from session '2d506ea2-95e3-4446-95cd-c1a510af7a74'.
+[2021-04-07 06:45:11Z INFO JobDispatcher] Job request 15 for plan 407e099f-9f57-47bf-9d2f-0927e016ad2f job a9a345e6-1106-5aaa-6fe5-f842db892828 received.
+[2021-04-07 06:45:11Z INFO JobDispatcher] Pull OrchestrationId 407e099f-9f57-47bf-9d2f-0927e016ad2f.build._12_x from JWT claims
+[2021-04-07 06:45:11Z INFO JobDispatcher] Job request a9a345e6-1106-5aaa-6fe5-f842db892828 processed succeed.
+[2021-04-07 06:45:11Z INFO Terminal] WRITE LINE: 2021-04-07 06:45:11Z: Running job: build (12.x)
+[2021-04-07 06:45:11Z INFO JobDispatcher] Start renew job request 15 for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:45:11Z INFO JobDispatcher] Successfully renew job request 15, job is valid till 2021-04-07 6:55:12 AM
+[2021-04-07 06:45:11Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin\Runner.Worker.exe'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 1856 1584'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2021-04-07 06:45:11Z INFO ProcessInvokerWrapper] Process started with process id 26488, waiting for process exit.
+[2021-04-07 06:45:11Z INFO JobDispatcher] Send job request message to worker for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:45:12Z INFO JobNotification] Entering JobStarted Notification
+[2021-04-07 06:45:12Z INFO JobNotification] Entering StartMonitor
+[2021-04-07 06:45:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:45:23Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:45:23Z INFO ProcessInvokerWrapper] Finished process 26488 with exit code 102, and elapsed time 00:00:12.0776947.
+[2021-04-07 06:45:23Z INFO JobDispatcher] Worker finished for job a9a345e6-1106-5aaa-6fe5-f842db892828. Code: 102
+[2021-04-07 06:45:23Z INFO JobDispatcher] finish job request for job a9a345e6-1106-5aaa-6fe5-f842db892828 with result: Failed
+[2021-04-07 06:45:23Z INFO Terminal] WRITE LINE: 2021-04-07 06:45:23Z: Job build (12.x) completed with result: Failed
+[2021-04-07 06:45:23Z INFO JobDispatcher] Stop renew job request for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:45:23Z INFO JobDispatcher] job renew has been canceled, stop renew job request 15.
+[2021-04-07 06:45:23Z INFO JobNotification] Entering JobCompleted Notification
+[2021-04-07 06:45:23Z INFO JobNotification] Entering EndMonitor
+[2021-04-07 06:46:42Z INFO RSAEncryptedFileKeyManager] Loading RSA key parameters from file C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\.credentials_rsaparams
+[2021-04-07 06:46:42Z INFO MessageListener] Message '4' received from session '2d506ea2-95e3-4446-95cd-c1a510af7a74'.
+[2021-04-07 06:46:42Z INFO JobDispatcher] Job request 16 for plan f2815111-50a4-4e58-b814-19834abb4df2 job a9a345e6-1106-5aaa-6fe5-f842db892828 received.
+[2021-04-07 06:46:42Z INFO JobDispatcher] Pull OrchestrationId f2815111-50a4-4e58-b814-19834abb4df2.build._12_x from JWT claims
+[2021-04-07 06:46:42Z INFO JobDispatcher] Job request a9a345e6-1106-5aaa-6fe5-f842db892828 processed succeed.
+[2021-04-07 06:46:42Z INFO Terminal] WRITE LINE: 2021-04-07 06:46:42Z: Running job: build (12.x)
+[2021-04-07 06:46:42Z INFO JobDispatcher] Start renew job request 16 for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:46:43Z INFO JobDispatcher] Successfully renew job request 16, job is valid till 2021-04-07 6:56:43 AM
+[2021-04-07 06:46:43Z INFO HostContext] Well known directory 'Bin': 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper] Starting process:
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   File name: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin\Runner.Worker.exe'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   Arguments: 'spawnclient 1836 1880'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   Working directory: 'C:\Users\rnlclng.pilar\OneDrive\Documents\airlineReservationSystem\deploy\bin'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   Require exit code zero: 'False'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   Encoding web name:  ; code page: ''
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   Force kill process on cancellation: 'True'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   Redirected STDIN: 'False'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   Persist current code page: 'False'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   Keep redirected STDIN open: 'False'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper]   High priority process: 'True'
+[2021-04-07 06:46:43Z INFO ProcessInvokerWrapper] Process started with process id 30636, waiting for process exit.
+[2021-04-07 06:46:43Z INFO JobDispatcher] Send job request message to worker for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:46:43Z INFO JobNotification] Entering JobStarted Notification
+[2021-04-07 06:46:43Z INFO JobNotification] Entering StartMonitor
+[2021-04-07 06:46:58Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:46:58Z INFO ProcessInvokerWrapper] STDOUT/STDERR stream read finished.
+[2021-04-07 06:46:58Z INFO ProcessInvokerWrapper] Finished process 30636 with exit code 100, and elapsed time 00:00:15.5597932.
+[2021-04-07 06:46:58Z INFO JobDispatcher] Worker finished for job a9a345e6-1106-5aaa-6fe5-f842db892828. Code: 100
+[2021-04-07 06:46:58Z INFO JobDispatcher] finish job request for job a9a345e6-1106-5aaa-6fe5-f842db892828 with result: Succeeded
+[2021-04-07 06:46:58Z INFO Terminal] WRITE LINE: 2021-04-07 06:46:58Z: Job build (12.x) completed with result: Succeeded
+[2021-04-07 06:46:58Z INFO JobDispatcher] Stop renew job request for job a9a345e6-1106-5aaa-6fe5-f842db892828.
+[2021-04-07 06:46:58Z INFO JobDispatcher] job renew has been canceled, stop renew job request 16.
+[2021-04-07 06:46:58Z INFO JobNotification] Entering JobCompleted Notification
+[2021-04-07 06:46:58Z INFO JobNotification] Entering EndMonitor
