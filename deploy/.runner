@@ -1,9 +1,0 @@
-﻿{
-  "agentId": 22,
-  "agentName": "deployment",
-  "poolId": 1,
-  "poolName": "Default",
-  "serverUrl": "https://pipelines.actions.githubusercontent.com/SSHhx8rsXseNkqXBAUaaHrdg7AY6Y28lQ0zjxSl9Mta0QYL8Eo",
-  "gitHubUrl": "https://github.com/SOFE2720/airlineReservationSystem",
-  "workFolder": "deploy"
-}
