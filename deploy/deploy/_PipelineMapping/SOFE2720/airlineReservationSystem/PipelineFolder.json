@@ -1,0 +1,12 @@
+﻿{
+  "repositoryName": "SOFE2720/airlineReservationSystem",
+  "pipelineDirectory": "airlineReservationSystem",
+  "workspaceDirectory": "airlineReservationSystem\\airlineReservationSystem",
+  "repositories": {
+    "SOFE2720/airlineReservationSystem": {
+      "repositoryPath": "airlineReservationSystem\\airlineReservationSystem",
+      "lastRunOn": "04/07/2021 02:40:31 -04:00"
+    }
+  },
+  "lastRunOn": "04/07/2021 02:46:43 -04:00"
+}
