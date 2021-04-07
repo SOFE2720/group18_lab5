@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/SOFE2720/airlineReservationSystem#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "sudo": "^1.0.3"
   }
 }
